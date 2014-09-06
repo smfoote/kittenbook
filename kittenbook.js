@@ -1,1 +1,1 @@
-alert('Hello, Steven!');
+prompt('Hello, what\'s your name?');
