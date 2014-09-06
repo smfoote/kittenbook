@@ -1,6 +1,14 @@
 var kbValues = {
   projectName: 'kittenbook',
-  versionNumber: '0.0.1'
+  versionNumber: '0.0.1',
+  areaCodes: {
+    '408': 'Silicon Valley',
+    '702': 'Las Vegas',
+    '801': 'Northern Utah',
+    '765': 'West Lafayette',
+    '901': 'Memphis',
+    '507': 'Rochester, MN'
+  }
 };
 var currentDate = new Date();  // Create Date object. More about objects and
                                // Date objects in chapter 5. This object will
