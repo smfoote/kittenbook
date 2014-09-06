@@ -1,12 +1,27 @@
-module.exports = funciton(grunt){
-    // Project configuration
+module.exports = function(grunt) {
     grunt.initConfig({
-      /*
-       * We will configure our tasks here
-       */
+      concat: {
+        release: {
+          src: ['js/values.js', 'js/prompt.js'],
+          dest: 'release/main.js'
+        }
+      },
+      copy: {
+        release: {
+          src: 'manifest.json',
+          dest: 'release/manifest.json'
+        }
+      },
+      jshint: {
+        files: ['js/values.js', 'js/prompt.js']
+      }
     });
 
-    // We will load Grunt plugins here
+    // Load Grunt plugins
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    // We will register tasks here
+    // Register tasks
+    grunt.registerTask('default', ['jshint', 'concat', 'copy']);
 };
