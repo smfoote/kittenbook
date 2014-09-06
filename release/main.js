@@ -11,6 +11,7 @@ var currentTime = currentDate.getFullYear() + '-' +  // Set year
                  currentDate.getHours() + ':' +      // Set hours (military time)
                  currentDate.getMinutes() + ':' +    // Set minutes
                  currentDate.getSeconds();           // Set seconds
+
 var userName = prompt('Hello, what\'s your name?');
 document.body.innerHTML = '<h1>Hello, ' + userName + '!</h1>' +
                          '<p>' + projectName + ' ' + versionNumber +
