@@ -1,5 +1,7 @@
-var projectName = 'kittenbook';
-var versionNumber = '0.0.1';
+var kbValues = {
+  projectName: 'kittenbook',
+  versionNumber: '0.0.1'
+};
 var currentDate = new Date();  // Create Date object. More about objects and
                                // Date objects in chapter 5. This object will
                                // be used to build our date.
@@ -11,3 +13,5 @@ var currentTime = currentDate.getFullYear() + '-' +  // Set year
                  currentDate.getHours() + ':' +      // Set hours (military time)
                  currentDate.getMinutes() + ':' +    // Set minutes
                  currentDate.getSeconds();           // Set seconds
+
+kbValues.currentTime = currentTime;
