@@ -10,19 +10,10 @@ var kbValues = {
     '507': 'Rochester, MN'
   }
 };
-var currentDate = new Date();  // Create Date object. More about objects and
-                               // Date objects in chapter 5. This object will
-                               // be used to build our date.
 
-// currentTime will look like '2014-01-25 at 14:45:12'
-var currentTime = currentDate.getFullYear() + '-' +  // Set year
-                 (currentDate.getMonth() + 1)+ '-' + // Set month
-                 currentDate.getDate() + ' at ' +    // Set day of the month
-                 currentDate.getHours() + ':' +      // Set hours (military time)
-                 currentDate.getMinutes() + ':' +    // Set minutes
-                 currentDate.getSeconds();           // Set seconds
-
-kbValues.currentTime = currentTime;
+function getAreaCodes() {
+  return kbValues.areaCodes;
+}
 
 // Get the user's name.
 function getUserName() {
@@ -66,10 +57,37 @@ function getLocation(phoneNumber) {
   return locationName ? locationName : 'somewhere';
 }
 
-var images = document.querySelectorAll('div.userContentWrapper img');
+function getImages() {
+  var images = document.querySelectorAll('div.userContentWrapper img');
+  return images;
+}
 
-for (var i=0, len=images.length; i<len; i++) {
-  console.log(images[i].src);
+function getImageHeight(image) {
+  return image.height;
+}
+
+function getImageWidth(image) {
+  return image.width;
+}
+
+function replaceImages(images, location) {
+  var baseImageUrl, height, width, image;
+  switch (location) {
+  case 'Memphis':
+    // Use puppies for Memphis
+    baseImageUrl = 'http://placepuppy.it/';
+    break;
+  default:
+    // use kittens everywhere else
+    baseImageUrl = 'http://placekitten.com/g/';
+    break;
+  }
+  for (var i=0,len=images.length; i<len; i++) {
+    image = images[i];
+    height = getImageHeight(image);
+    width = getImageWidth(image);
+    image.src = baseImageUrl + width + '/' + height;
+  }
 }
 
 function main() {
