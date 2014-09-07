@@ -6,8 +6,7 @@
     "content_scripts": [
         {
             "matches": ["*://www.facebook.com/*"],
-            "js": ["js/values.js","js/prompt.js"]
+            "js": ["main.js"]
         }
     ]
 }
-

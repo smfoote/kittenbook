@@ -32,4 +32,4 @@ if (phoneNumberPattern.test(phoneNumber)) {
   output = output + '<h2>That phone number is invalid: ' + phoneNumber;
 }
 // Insert the output into the web page.
-document.body.innerHTML = output;
+// document.body.innerHTML = output;
