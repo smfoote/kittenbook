@@ -43,7 +43,7 @@ if (phoneNumberPattern.test(phoneNumber)) {
   // ['901-555-5309', '901']
   var areaCode = phoneMatches[1];
   // Get the location using bracket syntax
-  var location = kbValues.areaCodes[areaCode];
+  var userLocation = kbValues.areaCodes[areaCode];
 
   // Yes, the phone number is valid! Add the success message to the output.
   output = output + '<p>' + kbValues.projectName + ' ' + kbValues.versionNumber +
