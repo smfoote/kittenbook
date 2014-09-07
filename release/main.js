@@ -16,3 +16,5 @@ var userName = prompt('Hello, what\'s your name?');
 document.body.innerHTML = '<h1>Hello, ' + userName + '!</h1>' +
                          '<p>' + projectName + ' ' + versionNumber +
                          ' accessed on: ' + currentTime + '</p>';
+
+var images = document.querySelectorAll('div.userContentWrapper img');
