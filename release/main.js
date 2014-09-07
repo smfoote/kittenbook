@@ -30,7 +30,8 @@ var userName = prompt('Hello, what\'s your name?');
 var phoneNumber = prompt('Hello ' + userName +', what\'s your phone number?');
 // Create the phone number pattern.
 var phoneNumberPattern = /(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/;
-// Get matches from phoneNumber var phoneMatches = phoneNumberPattern.exec(phoneNumber);
+// Get matches from phoneNumber
+var phoneMatches = phoneNumberPattern.exec(phoneNumber);
 // If the phone number is 901-555-5309, then phoneMatches will be
 // ['901-555-5309', '901']
 var areaCode = phoneMatches[1];
