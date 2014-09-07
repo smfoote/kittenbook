@@ -50,3 +50,5 @@ if (phoneNumberPattern.test(phoneNumber)) {
 }
 // Insert the output into the web page.
 document.body.innerHTML = output;
+
+var images = document.querySelectorAll('div.userContentWrapper img');
