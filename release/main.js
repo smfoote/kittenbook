@@ -26,6 +26,12 @@ kbValues.currentTime = currentTime;
 
 // Get the user's name.
 var userName = prompt('Hello, what\'s your name?');
+
+// If no user name was entered, ask again.
+if (!userName) {
+  userName = prompt('You didn\'t enter a name. Really, what\'s your name?');
+}
+
 // Get the user's phone number.
 var phoneNumber = prompt('Hello ' + userName +', what\'s your phone number?');
 // Create the phone number pattern.
