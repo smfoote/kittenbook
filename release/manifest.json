@@ -1,1 +1,12 @@
-{    "manifest_version": 2,    "name": "kittenbook",    "description": "Replace photos on Facebook with kittens",    "version": "0.0.1",    "content_scripts": [        {            "matches": ["*://www.facebook.com/*"],            "js": ["main.js"]        }    ]}
+{
+    "manifest_version": 2,
+    "name": "kittenbook",
+    "description": "Replace photos on Facebook with kittens",
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "matches": ["*://www.facebook.com/*"],
+            "js": ["main.js"]
+        }
+    ]
+}
