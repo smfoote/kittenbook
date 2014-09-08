@@ -11,6 +11,11 @@ var kbValues = {
   }
 };
 
+/**
+ * Return the area codes object from kbValues
+ * @method getAreaCodes
+ * @return {object}
+ */
 function getAreaCodes() {
   return kbValues.areaCodes;
 }
