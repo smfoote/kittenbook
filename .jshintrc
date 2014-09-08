@@ -1,0 +1,22 @@
+{
+  "predef": {
+    "kittenbook": true,
+    "kbValues": true,
+    "prompt": true
+  },
+
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": false,
+  "trailing": true,
+
+  "browser": true
+}
