@@ -25,6 +25,11 @@ function getUserName() {
   return userName;
 }
 
+// Validate a phone number
+function validatePhoneNumber(phoneNumber) {
+  return phoneNumber.match(/(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/);
+}
+
 // Get the user's phone number.
 function getPhoneNumber(userName) {
   var phoneNumber = prompt('Hello ' + userName +', what\'s your phone number?');
@@ -32,11 +37,6 @@ function getPhoneNumber(userName) {
     phoneNumber = prompt('Please enter a valid phone number.');
   }
   return phoneNumber;
-}
-
-// Validate a phone number
-function validatePhoneNumber(phoneNumber) {
-  return phoneNumber.match(/(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/);
 }
 
 // Determine location based on phone number
