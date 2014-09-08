@@ -1,4 +1,8 @@
-// Get the user's name.
+/**
+ * Ask for the user's name, twice if necessary.
+ * @method getUserName
+ * @return {string} The user's name
+ */
 function getUserName() {
   var userName = prompt('Hello, what\'s your name?');
 
@@ -8,7 +12,12 @@ function getUserName() {
   return userName;
 }
 
-// Validate a phone number
+/**
+ * Check the validity of a phone number
+ * @method
+ * @param {string} phoneNumber The phone number to be validated
+ * @return {boolean}
+ */
 function validatePhoneNumber(phoneNumber) {
   return phoneNumber.match(/(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/);
 }
