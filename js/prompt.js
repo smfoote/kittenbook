@@ -19,7 +19,7 @@ function getUserName() {
  * @return {boolean}
  */
 function validatePhoneNumber(phoneNumber) {
-  return (/(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/).test(phoneNumber);
+  return (/(?:1-)?\(?(\d{3})(?:-|\) ?)\d{3}-\d{4}/).test(phoneNumber);
 }
 
 /**
