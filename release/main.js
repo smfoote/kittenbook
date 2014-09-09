@@ -88,7 +88,7 @@ function getLocation(phoneNumber) {
  * @return {NodeList}
  */
 function getImages() {
-  var images = document.querySelectorAll('div.userContentWrapper img');
+  var images = document.querySelectorAll('div.userContentWrapper img, div.pinHolder img');
   return images;
 }
 
