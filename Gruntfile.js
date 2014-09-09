@@ -18,6 +18,15 @@ module.exports = function(grunt) {
           },
           files: ['release/main.js']
         },
+        jasmine: {
+          test: {
+            src: ['js/values.js', 'js/prompt.js', 'js/getImages.js',
+                  'js/replaceImages.js', 'js/main.js'],
+            options: {
+              specs: 'test/*.js'
+            }
+          }
+        },
         watch: {
           files: ['<%= jshint.files %>', 'manifest.json'],
           tasks: ['default']
@@ -34,6 +43,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jsdoc');
 
