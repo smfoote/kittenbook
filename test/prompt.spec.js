@@ -10,11 +10,7 @@ describe('prompt.js', function() {
     it('should return true when given a 1-800 number', function() {
       var result = validatePhoneNumber('1-800-867-5309');
 
-      // Change to the following when we know this test can fail:
-      //
-      // expect(result).toBe(true);
-      //
-      expect(result).toBe(false);
+      expect(result).toBe(true);
     });
   });
 });
